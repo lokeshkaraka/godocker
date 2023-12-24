@@ -1,0 +1,19 @@
+
+FROM golang:1.17
+
+
+WORKDIR /app
+
+
+RUN mkdir -p /app/New\ Folder
+
+
+COPY New\ Folder/ .
+
+
+RUN go build -o main example.go
+
+
+EXPOSE 8080
+
+CMD ["./main"]
